@@ -1,7 +1,8 @@
-import React from 'react';
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
 
-export default function Home() {
+//campaign view
+export default function Campaign() {
   return (
     <div>
       <Head>
@@ -9,5 +10,5 @@ export default function Home() {
       </Head>
       <h1>Hello welcome to campaign</h1>
     </div>
-  )
+  );
 }

@@ -1,0 +1,12 @@
+.small_text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #11142d;
+  margin-bottom: -4px;
+}
+
+.large_text {
+  font-size: 40px;
+  font-weight: 600;
+  color: #11142d;
+}

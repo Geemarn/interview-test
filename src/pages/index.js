@@ -1,5 +1,6 @@
-import React from 'react';
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
+require("../styles/variables.less");
 
 export default function Home() {
   return (
@@ -7,7 +8,6 @@ export default function Home() {
       <Head>
         <title>Interview Test</title>
       </Head>
-      <h1>Hello dashboard how are you</h1>
     </div>
-  )
+  );
 }

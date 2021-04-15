@@ -1,0 +1,110 @@
+.layout {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+}
+.logo {
+  text-align: center;
+  /*margin-bottom: 10px;*/
+  cursor: pointer;
+}
+
+.sider {
+  padding: 20px;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  oveflow-x: auto;
+  height: 100vh;
+  left: 0;
+}
+.sider::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.userProfileBtn {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 12px;
+  padding-left: 12px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: none;
+  color: #5f75ee;
+  margin-top: -30px;
+}
+.userProfileBtn:hover {
+  background-color: #3f8cff;
+  color: #fff !important;
+}
+.up_icon.svg.path:hover {
+  fill: #fff;
+  stroke: #fff;
+}
+
+.user_info {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #000;
+}
+
+.user_subinfo {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #808191;
+}
+.user_avatar {
+  color: #f56a00;
+  background-color: #fde3cf;
+  margin-top: 2px;
+}
+.sider_bottom {
+  position: fixed;
+  background-color: #fff;
+  text-align: center;
+  bottom: 0;
+  left: 2px;
+  margin: 0;
+  padding: 20px 104px;
+  display: flex;
+  border-top: 0.1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 20px 10px 80px;
+  margin-bottom: 100px;
+}
+
+.content {
+  position: fixed;
+  padding: 10px 20px 10px 80px;
+  margin-top: 150px;
+}
+.smallText {
+  font-size: 12px;
+  margin: 50px 0 30px 18px;
+}
+.divider {
+  /*width: 176px;*/
+  margin: 0 auto;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background: #ff754c;
+  position: relative;
+  top: -68px;
+  left: 60px;
+}

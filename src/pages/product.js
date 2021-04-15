@@ -1,7 +1,8 @@
-import React from 'react';
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
 
-export default function Home() {
+//product view
+export default function Product() {
   return (
     <div>
       <Head>
@@ -9,5 +10,5 @@ export default function Home() {
       </Head>
       <h1>Hello welcome to products</h1>
     </div>
-  )
+  );
 }
