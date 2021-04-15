@@ -11,6 +11,8 @@ const { Content } = Layout;
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  //retrieving route path name router
   const pageTitle = router.pathname.split("/")[1];
   return (
     <Layout className={styles.layout}>
