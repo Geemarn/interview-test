@@ -12,6 +12,7 @@ import SettingIcon from "../../../assets/setting-icon.svg";
 import MessageIcon from "../../../assets/message-icon.svg";
 import NotificationIcon from "../../../assets/notification-icon.svg";
 import ChatIcon from "../../../assets/chat-icon.svg";
+import BurgerIcon from "../../../assets/burger-icon.svg";
 import UserProfileBtn from "./user-profile-btn";
 import styles from "../../../styles/Layout.module.css";
 import Link from "next/link";
@@ -38,6 +39,14 @@ const SiderView = () => {
   //set condition to show if side bar is collapsed or not
   const collapseStyle = collapse ? "collapse" : null;
 
+  //burger icon
+  const Burger = ({ marginLeft, marginBottom }) => (
+    <BurgerIcon
+      style={{ cursor: "pointer", marginLeft, marginBottom }}
+      onClick={toggleCollapsed}
+    />
+  );
+
   return (
     <Sider
       theme={"light"}
@@ -51,8 +60,16 @@ const SiderView = () => {
       }}
       trigger={null}
     >
-      <div className={styles.logo} onClick={toggleCollapsed}>
+      {collapse && (
+        <div>
+          <Burger marginLeft={22} />
+          <Divider />
+        </div>
+      )}
+
+      <div className={styles.logo}>
         {collapse ? <SmallLogo style={{ marginLeft: 10 }} /> : <Logo />}
+        {!collapse && <Burger marginBottom={20} />}
       </div>
       <Menu defaultSelectedKeys={["overview"]} style={{ border: "none" }}>
         <p className={styles.smallText}>

@@ -16,12 +16,12 @@ const HeaderView = (props) => {
       <Head>
         <title>Interview Test</title>
       </Head>
-      <Row justify="space-around">
-        <Col xs={24} sm={12} md={8} lg={12} xl={8}>
+      <Row justify="center">
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
           <p className={styles.small_text}>Hi Dash UI8,</p>
           <p className={styles.large_text}>{title}</p>
         </Col>
-        <Col xs={24} sm={12} md={8} lg={6} xl={8}>
+        <Col xs={24} sm={12} md={8} lg={8} xl={8}>
           <SearchIcon
             style={{ position: "relative", top: 4, marginRight: 10 }}
           />{" "}
@@ -31,7 +31,7 @@ const HeaderView = (props) => {
           xs={24}
           sm={12}
           md={8}
-          lg={6}
+          lg={8}
           xl={8}
           style={{ position: "relative" }}
         >
