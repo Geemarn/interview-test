@@ -4,7 +4,7 @@ import styles from "../styles/Layout.module.css";
 import HeaderView from "../components/layout/Header";
 import SiderView from "../components/layout/Sider";
 // require('../styles/variables.less');
-import "../styles/globals.less";
+import "../styles/globals.css";
 import { useRouter } from "next/router";
 
 const { Content } = Layout;
