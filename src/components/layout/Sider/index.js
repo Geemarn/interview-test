@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Layout, Menu, Divider, Button, Avatar, Switch } from "antd";
-import Logo from "../../../assets/logo.svg";
-import SmallLogo from "../../../assets/logo-2.svg";
 import OverviewIcon from "../../../assets/overview-icon.svg";
 import ProductIcon from "../../../assets/product-icon.svg";
 import CampaignIcon from "../../../assets/campaign-icon.svg";
@@ -14,9 +12,9 @@ import NotificationIcon from "../../../assets/notification-icon.svg";
 import ChatIcon from "../../../assets/chat-icon.svg";
 import BurgerIcon from "../../../assets/burger-icon.svg";
 import UserProfileBtn from "./user-profile-btn";
-import styles from "../../../styles/Layout.module.css";
-import Link from "next/link";
+import styles from "../../../styles/layout.module.css";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const { Sider } = Layout;
 
@@ -27,9 +25,10 @@ const iconStyle = {
   marginRight: 20,
 };
 
-const SiderView = () => {
+const SiderView = (props) => {
+  const { setCollapse, collapse } = props;
+
   const router = useRouter();
-  const [collapse, setCollapse] = useState(false);
 
   //toggle side bar collapse
   const toggleCollapsed = () => {
@@ -57,6 +56,7 @@ const SiderView = () => {
       style={{
         padding: collapse && "20px 0",
         width: collapse && 0,
+        display: collapse && "block",
       }}
       trigger={null}
     >
@@ -68,8 +68,23 @@ const SiderView = () => {
       )}
 
       <div className={styles.logo}>
-        {collapse ? <SmallLogo style={{ marginLeft: 10 }} /> : <Logo />}
-        {!collapse && <Burger marginBottom={20} />}
+        {collapse ? (
+          <Image
+            src={require("../../../public/logo-2.png")}
+            alt={"icon"}
+            width={90}
+            height={48}
+            style={{ marginTop: 10 }}
+          />
+        ) : (
+          <Image
+            src={require("../../../public/logo.png")}
+            alt={"icon"}
+            width={176}
+            height={40}
+          />
+        )}
+        {!collapse && <Burger marginBottom={18} />}
       </div>
       <Menu defaultSelectedKeys={["overview"]} style={{ border: "none" }}>
         <p className={styles.smallText}>
