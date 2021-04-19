@@ -1,7 +1,7 @@
 import React from "react";
-import ProIcon from "../../../assets/pro-icon.svg";
 import { Avatar, Button } from "antd";
 import UpDownIcon from "../../../assets/up-down-icon.svg";
+import Image from "next/image";
 
 const btnStyle = {
   height: 56,
@@ -23,7 +23,13 @@ const UserProfileBtn = (props) => {
       {!collapse ? (
         <>
           <div style={{ position: "relative" }}>
-            <ProIcon style={{ marginTop: 30 }} />
+            <Image
+              src={require("../../../public/Pro.png")}
+              alt={"icon"}
+              width={216}
+              height={298}
+              style={{ marginTop: 30 }}
+            />
             <Button style={btnStyle}>Get Pro Now</Button>
           </div>
           <div className={styles.userProfileBtn}>

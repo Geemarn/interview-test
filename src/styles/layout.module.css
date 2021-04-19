@@ -17,6 +17,13 @@
   height: 100vh;
   left: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .sider {
+    display: none;
+  }
+}
+
 .sider::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
@@ -54,11 +61,13 @@
   margin-bottom: 12px;
   color: #808191;
 }
+
 .user_avatar {
   color: #f56a00;
   background-color: #fde3cf;
   margin-top: 2px;
 }
+
 .sider_bottom {
   position: fixed;
   background-color: #fff;
@@ -73,17 +82,37 @@
 
 .header {
   position: fixed;
-  width: 100%;
   background-color: #fff;
-  padding: 10px 20px 10px 80px;
+  padding: 10px 0 -4px 40px;
   margin-bottom: 100px;
 }
 
 .content {
   position: fixed;
-  padding: 10px 20px 10px 80px;
-  margin-top: 150px;
+  padding: 20px 20px 50px 40px;
+  margin-top: 120px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90vh;
+  margin-left: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .content {
+    margin-left: 20px;
+    margin-top: 90px;
+    padding: 20px 10px 30px 0;
+  }
+  .header {
+    padding: 10px 0 0px 40px;
+  }
+}
+
+.content::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
 .smallText {
   font-size: 12px;
   margin: 50px 0 30px 18px;

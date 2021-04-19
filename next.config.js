@@ -1,6 +1,7 @@
 const withAntdLess = require('next-plugin-antd-less');
+const withImages = require('next-images');
 
-module.exports = withAntdLess({
+module.exports = withImages(withAntdLess({
   // // optional
   modifyVars: { '@primary-color': '#6C5DD3' },
   // optional
@@ -9,7 +10,7 @@ module.exports = withAntdLess({
   cssLoaderOptions: {},
 
   // Other Config Here...
-
+  fileExtensions: ["jpg", "jpeg", "png"],
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -20,4 +21,4 @@ module.exports = withAntdLess({
     });
     return config;
   },
-});
+}));
